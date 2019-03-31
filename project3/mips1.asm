@@ -1,0 +1,9 @@
+addiu $s1,$s1,100
+addiu $s2,$s2,600
+add $s3,$s2,$s1
+lw $s4,0($s2)
+add $s5,$s4,$s1
+add $s6,$s2,$s4
+sub $s7,$s5,$s1
+beq $s7,$zero,else
+else:addiu $s1,$s1,200
