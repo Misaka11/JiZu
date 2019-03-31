@@ -1,0 +1,13 @@
+addiu $s1, $zero, 100
+addiu $s2, $zero, 1000
+addiu $s5, $zero, 100
+ori $s2, $s2, 1
+start:
+add $s1, $s1, $s1
+slt $s4, $s1, $s2
+beq $s4, $zero, else
+j start
+else:
+sw $s1, 100($zero)
+lw $s6, 100($zero)
+mult $s5, $s6
